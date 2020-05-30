@@ -9,9 +9,7 @@ The goals / steps of this project are the following:
 * Kalman Filter algorithm handles the first measurements appropriately.
 * Kalman Filter algorithm first predicts then updates.
 * Kalman Filter can handle radar and lidar measurements.
-
 * px, py, vx, vy output coordinates must have an RMSE <= [.11, .11, 0.52, 0.52] when using the file: "obj_pose-laser-radar-synthetic-input.txt" which is the same data file the simulator uses for Dataset 1.
-
 * code should compile.
 
 [//]: # (Image References)
@@ -20,7 +18,23 @@ The goals / steps of this project are the following:
 
 
 ---
-### Files Submitted & Code Quality
+### Root Mean Squared Error (RMSE) of px, py, vx, vy
+
+The px, py, vx, and vy RMSE is less than the values [.11, .11, 0.52, 0.52].
+
+Final RMSE for the first dataset:
+
+| Label |  RMSE  | 
+|:-----:|:------:| 
+| px    | 0.0960 | 
+| py    | 0.0922 |
+| vx    | 0.4520 |
+| vy	| 0.4430 |
+
+Here you can see the final simulation result for the first dataset:
+
+![alt text][gif1]
+
 
 #### code compilation
 
@@ -104,21 +118,4 @@ if (measurement_pack.sensor_type_ == MeasurementPackage::RADAR) {...}
 else if (measurement_pack.sensor_type_ == MeasurementPackage::LASER) {...}
 
 ```
-
-### Root Mean Squared Error (RMSE) of px, py, vx, vy
-
-The px, py, vx, and vy RMSE is less than the values [.11, .11, 0.52, 0.52].
-
-Final RMSE for the first dataset:
-
-| Label |  RMSE  | 
-|:-----:|:------:| 
-| px    | 0.0960 | 
-| py    | 0.0922 |
-| vx    | 0.4520 |
-| vy	| 0.4430 |
-
-Here you can see the final simulation result for the first dataset:
-
-![alt text][gif1]
 
